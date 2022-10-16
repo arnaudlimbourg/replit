@@ -31,6 +31,9 @@ if SECRET_KEY is None:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 ALLOWED_HOSTS = ['*']
 X_FRAME_OPTIONS = '*'
 
@@ -43,6 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',  # user management (login, etc.)
+    'home',  # base app to handle welcome screens and such
+    'accounts',  # accounts, main unit of our project
+    'media_management',  # handles all the media
 ]
 
 MIDDLEWARE = [
@@ -129,3 +136,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'users.User'
+
+MEDIA_ROOT = BASE_DIR / "media"
+
+MEDIA_URL = "media/"

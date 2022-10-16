@@ -11,4 +11,8 @@ version = "0.1.0"
 [tool.poetry.dependencies]
 Django = "^4.0"
 python = "^3.8"
+django-model-utils = "^4.2.0"
+black = "^22.10.0"
+django-extensions = "^3.2.1"
+tzdata = "^2022.5"
 [tool.poetry.dev-dependencies]
