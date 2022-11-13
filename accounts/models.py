@@ -10,4 +10,6 @@ class Account(TimeStampedModel):
     """
     name = models.CharField(max_length=150)
     description = models.TextField(default="")
-    
+
+    def __str__(self):
+        return self.name

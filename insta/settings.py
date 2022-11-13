@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'users',  # user management (login, etc.)
     'home',  # base app to handle welcome screens and such
     'accounts',  # accounts, main unit of our project
@@ -142,3 +143,7 @@ AUTH_USER_MODEL = 'users.User'
 MEDIA_ROOT = BASE_DIR / "media"
 
 MEDIA_URL = "media/"
+
+CSRF_TRUSTED_ORIGINS = ["https://*.5a-python.repl.co"]
+
+MAX_UPLOAD = os.getenv("MAX_UPLOAD")

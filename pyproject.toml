@@ -15,4 +15,7 @@ django-model-utils = "^4.2.0"
 black = "^22.10.0"
 django-extensions = "^3.2.1"
 tzdata = "^2022.5"
+rich = "^12.6.0"
+polyfile = "^0.4.2"
+loguru = "^0.6.0"
 [tool.poetry.dev-dependencies]
